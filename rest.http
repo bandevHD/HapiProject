@@ -1,0 +1,53 @@
+POST http://localhost:3000/api-v1/voucher/create-voucher
+Content-Type: application/json
+
+{
+    "title": "Giam gia khuyen mai",
+    "content": "Ok",
+    "description": "Ok",
+    "discount": "1233",
+    "quantity": 12,
+    "startTimeAt": "16-02-2023 10:23",
+    "endTimeAt": "16-02-2023 23:23"
+}
+
+###
+GET http://localhost:3000/api-v1/voucher/get-list-voucher
+
+###
+GET http://localhost:3000/api-v1/voucher/get-voucher/63fd7914938c30c6770d0c5b
+
+###
+PUT  http://localhost:3000/api-v1/voucher/update-voucher
+Content-Type: application/json
+
+{
+    "_id": "63fd7914938c30c6770d0c5b",
+    "title": "Giam gia khuyen mai ngày 28-2-2023",
+    "content": "Ok",
+    "description": "Ok",
+    "discount": "1233",
+    "quantity": 12,
+    "startTimeAt": "16-02-2023 10:23",
+    "endTimeAt": "16-02-2023 23:23"
+}
+
+###
+PATCH  http://localhost:3000/api-v1/voucher/update-voucher
+Content-Type: application/json
+
+{
+    "_id": "63fd7914938c30c6770d0c5b",
+    "title": "Giam gia khuyen mai ngày 28-2-2023 lần 2"
+}
+
+###
+DELETE  http://localhost:3000/api-v1/voucher/delete-voucher
+Content-Type: application/json
+
+{
+    "_id": "63fd7914938c30c6770d0c5b"
+}
+
+
+
