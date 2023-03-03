@@ -1,4 +1,5 @@
 import { model, Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
 const voucherSchema = new Schema(
   {
@@ -39,11 +40,11 @@ const voucherSchema = new Schema(
 );
 
 voucherSchema.pre('find', function() {
-  this.where({ isDeleted: false });
+  this.where({ isDelete: false });
 });
 
 voucherSchema.pre('findOne', function() {
-  this.where({ isDeleted: false });
+  this.where({ isDelete: false });
 });
 
-export default model('Voucher', voucherSchema);
+export default mongoose.model('Voucher', voucherSchema);
